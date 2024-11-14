@@ -2,10 +2,13 @@ Metadata-Version: 2.1
 Name: mlProject
 Version: 0.0.0
 Summary: A small python package for ml app
-Home-page: https://github.com/sushilbal/mlops_end_to_end
-Author: Sushil Bal
+Home-page: https://github.com/Sushil/mlops_end_to_end
+Author: Sushil
 Author-email: sushil.kumar.bal@gmail.com
-Project-URL: Bug Tracker, https://github.com/sushilbal/mlops_end_to_end/issues
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/Sushil/mlops_end_to_end/issues
+Platform: UNKNOWN
 License-File: LICENSE
 
 # mlops_end_to_end
+
