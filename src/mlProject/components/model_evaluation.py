@@ -9,6 +9,7 @@ import joblib
 from mlProject.entity.config_entity import ModelEvaluationConfig
 from mlProject.utils.common import save_json
 from pathlib import Path
+import dagshub
 
 
 class ModelEvaluation:
@@ -22,6 +23,15 @@ class ModelEvaluation:
         r2 = r2_score(actual, pred)
         return rmse, mae, r2
     
+    def initialize_dagshub(self):
+        mlflow_uri=self.config.mlflow_uri
+        if mlflow_uri:
+            arr=self.config.mlflow_uri.split('/')[-2:]
+            repo_owner=arr[0]
+            repo_name=arr[1].split('.')[0]
+            print(f'repo Owner ={repo_owner} and repo name={repo_name}')
+            #"https://dagshub.com/sushilbal/eoe_mlops_poc.mlflow"
+            dagshub.init(repo_owner=repo_owner, repo_name=repo_name, mlflow=True)
 
 
     def log_into_mlflow(self):

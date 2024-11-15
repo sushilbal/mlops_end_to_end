@@ -16,9 +16,16 @@ class DataTransformation:
 
     # I am only adding train_test_spliting cz this data is already cleaned up
 
+    def data_cleanup(self):
+        data = pd.read_csv(self.config.data_path)
+        data.drop(columns=['type'],axis=1,inplace=True)
+        data.dropna(inplace=True)
+        print(data.info())
+        return data
+
 
     def train_test_spliting(self):
-        data = pd.read_csv(self.config.data_path)
+        data = self.data_cleanup()
 
         # Split the data into training and test sets. (0.75, 0.25) split.
         train, test = train_test_split(data)
