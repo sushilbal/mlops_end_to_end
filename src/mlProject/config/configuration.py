@@ -1,5 +1,6 @@
 from src.mlProject.constants import *
 from src.mlProject.utils.common import read_yaml, create_directories
+import os
 from src.mlProject.entity.config_entity import (DataIngestionConfig,
                                             DataValidationConfig,
                                             DataTransformationConfig,
@@ -103,7 +104,7 @@ class ConfigurationManager:
             all_params=params,
             metric_file_name = config.metric_file_name,
             target_column = schema.name,
-            mlflow_uri="https://dagshub.com/someshnaman/End_to_end_MLOPS_project.mlflow",
+            mlflow_uri=os.getenv("MLFLOW_TRACKING_URI")  ,#,"https://dagshub.com/sushilbal/eoe_mlops_poc.mlflow"
            
         )
 

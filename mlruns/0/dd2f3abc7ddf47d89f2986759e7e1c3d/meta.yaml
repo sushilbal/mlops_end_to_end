@@ -1,0 +1,15 @@
+artifact_uri: file:///home/sushil/ml-programming/mlops_end_to_end/mlruns/0/dd2f3abc7ddf47d89f2986759e7e1c3d/artifacts
+end_time: 1731646967801
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: dd2f3abc7ddf47d89f2986759e7e1c3d
+run_name: valuable-deer-654
+run_uuid: dd2f3abc7ddf47d89f2986759e7e1c3d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731646965909
+status: 3
+tags: []
+user_id: sushil
